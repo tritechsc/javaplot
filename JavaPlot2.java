@@ -43,6 +43,10 @@ public class JavaPlot2 extends JFrame {
 
    public void paint( Graphics g )
    {
+   
+   
+   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// only change code below this line
 	   int x, y, h, k, t;	
 	   int iRed, iGreen, iBlue;//integer RGB
 	   double sRed, sGreen, sBlue;// double start RGB
@@ -50,8 +54,7 @@ public class JavaPlot2 extends JFrame {
 	   double aRed, aGreen, aBlue;// ajust RGB
 		x = 0;  y = 0; h = 0; k = 0; t = 0;
 	for (t = 0;t <800;t++){
-		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		// only change code below this line
+		
 		iRed = 127;
 		iGreen = 64;
 		iBlue = 0;
@@ -84,4 +87,6 @@ public class JavaPlot2 extends JFrame {
 		); // end call to addWindowListener
    }
 }// end class Painter
+
+
 
