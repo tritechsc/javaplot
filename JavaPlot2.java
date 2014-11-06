@@ -1,5 +1,4 @@
-//JavaPlot2 code by CWColeman
-
+//code by CW Coleman
 import java.awt.*;
 import java.awt.event.*; 
 import javax.swing.*;
@@ -48,19 +47,23 @@ public class JavaPlot2 extends JFrame {
    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		// only change code below this line
 	   int x, y, h, k, t;	
-	   int iRed, iGreen, iBlue;//integer RGB
+	   int iRed, iGreen, iBlue, aiRed, aiGreen, aiBlue;//integer RGB
 	   double sRed, sGreen, sBlue;// double start RGB
 	   double eRed, eGreen, eBlue;// double end RGB
 	   double aRed, aGreen, aBlue;// ajust RGB
 		x = 0;  y = 0; h = 0; k = 0; t = 0;
-	for (t = 0;t <800;t++){
-		
 		iRed = 127;
 		iGreen = 64;
 		iBlue = 0;
+		aiRed = 3;  // adjust integer Red
+	for (t = 0;t <800;t++){
+		
+		if (iRed > 255) iRed = 0;
+		if (iRed < 0) iRed = 255;
 			
 		g.setColor(new Color(iRed,iGreen,iBlue));
 		g.drawLine(0,0,800-h,600+k);
+		iRed = iRed + aiRed;
 		h = h + 1;
 		k = k + 1;
 		
@@ -87,6 +90,3 @@ public class JavaPlot2 extends JFrame {
 		); // end call to addWindowListener
    }
 }// end class Painter
-
-
-
